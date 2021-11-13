@@ -1,0 +1,8 @@
+{
+    "packageManager": "github",
+    "name": "pneumahealth-consults-js",
+    "repo": "PneumaCareHQ/pneumahealth-consults-js",
+    "files": {
+      "include": ["dist/bundle.js"]
+    }
+  }
