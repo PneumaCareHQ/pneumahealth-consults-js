@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>PneumaHealth Consults Widget</title>
+ <style>
+   button {
+     height: 40px;
+   }
+ </style>
+</head>
+<body style="background: teal">
+  <button onclick="openPneumaCareWidget()">Talk to a Doctor</button>
+  <script src="./../dist/bundle.js"></script>
+  <script>
+    function openPneumaCareWidget() {
+      const config = { 
+        publicAPIKey: 'j72nw6niu527coanz7b8',
+        userId: 's64h80wbp2pdjsi'
+      };
+      PneumaHealthConsultsWidget.init(config);
+    }
+  </script>
+  
+</body>
+</html>
