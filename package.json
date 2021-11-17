@@ -1,0 +1,22 @@
+{
+  "name": "pneumahealth-js",
+  "version": "1.0.0",
+  "description": "JS library for implementing the PneumaHealth widget - pneumahealth-js is a safe and secure web drop-in module and this library provides a front-end web",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PneumaCareHQ/pneumahealth-consults-js.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PneumaCareHQ/pneumahealth-consults-js/issues"
+  },
+  "homepage": "https://github.com/PneumaCareHQ/pneumahealth-consults-js#readme"
+}
