@@ -10,7 +10,7 @@ Checkout the [React JS Demo](https://codesandbox.io/s/pneumahealth-js-demo-yo832
 Using CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/PneumaCareHQ/pneumahealth-consults-js@1.0.2/dist/bundle.js"/>
+<script src="https://cdn.jsdelivr.net/gh/PneumaCareHQ/pneumahealth-consults-js@1.0.3/dist/bundle.js"/>
 ```
 
 ## Usuage
@@ -23,15 +23,17 @@ For others, just use
 PneumaHealthJS.init({
     publicAPIKey: 'xxxxxxxxxxxxxxx',
     userId: 'xxxxxxxxxxxxxxx',
-    service: "consults", // or "diagnostics" 
+    service: "consults", // or "diagnostics",
 });
 ```
 
 
 ## PneumaHealthJS.init Options
 
-|Name                   | Type           | Required            | Default Value       | Description         |
-|-----------------------|----------------|---------------------|---------------------|---------------------|
-|  `publicAPIKey `               | `String`       | true                |                     | Your public key from your Dashboard.
-|  `userId `             | `String`       | true                |                     | Your patient's ID.
-|  `service `             | `String`       | true                |                     | "consults" or "diagnostics" .
+|Name                   | Type           | Required            | Description         |
+|-----------------------|----------------|---------------------|---------------------|
+|  `publicAPIKey `               | `String`       | true                | Your public key from your Dashboard.
+|  `userId `             | `String`       | true                | Your patient's ID.
+|  `service `             | `String`       | true                | "consults" or "diagnostics" .
+|  `paystackKey `             | `String`       | false                | Your paystack Public Key .
+|  `markup `             | `String`       | false                | Your percentage profit .

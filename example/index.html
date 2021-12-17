@@ -11,16 +11,26 @@
  </style>
 </head>
 <body style="background: teal">
-  <button onclick="openPneumaCareWidget()">Talk to a Doctor</button>
+    <h2>Hello there</h2>
+    <button onclick="openPneumaCareWidgets()">All PneumaCare Widgets</button>
+    <button onclick="openPneumaCareConsultsWidget()">Talk to a Doctor</button>
+    <button onclick="openPneumaCareDiagnosticsWidget()">
+      Connect with a Lab
+    </button>
   <script src="./../dist/bundle.js"></script>
   <script>
-    function openPneumaCareWidget() {
-      const config = { 
-        publicAPIKey: 'j72nw6niu527coanz7b8',
-        userId: 's64h80wbp2pdjsi',
-        service: "consults", // or "diagnostics" 
-      };
-      PneumaHealthJS.init(config);
+    const config = {
+      publicAPIKey: "j72nw6niu527coanz7b8",
+      userId: "s64h80wbp2pdjsi"
+    };
+    function openPneumaCareWidgets() {
+      PneumaHealthJS.init({ ...config });
+    }
+    function openPneumaCareConsultsWidget() {
+      PneumaHealthJS.init({ ...config, service: "consults" });
+    }
+    function openPneumaCareDiagnosticsWidget() {
+      PneumaHealthJS.init({...config, service: 'diagnostics', paystackKey: "pk_test_****", markup: 20 });
     }
   </script>
   
