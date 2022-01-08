@@ -21,9 +21,9 @@ import PneumaHealthJS from 'pneumahealth-js'
 For others, just use
 ```js
 PneumaHealthJS.init({
-    publicAPIKey: 'xxxxxxxxxxxxxxx',
     userId: 'xxxxxxxxxxxxxxx',
     service: "consults", // or "diagnostics",
+    businessName: "Test Medical Clinic"
 });
 ```
 
@@ -32,8 +32,8 @@ PneumaHealthJS.init({
 
 |Name                   | Type           | Required            | Description         |
 |-----------------------|----------------|---------------------|---------------------|
-|  `publicAPIKey `               | `String`       | true                | Your public key from your Dashboard.
 |  `userId `             | `String`       | true                | Your patient's ID.
-|  `service `             | `String`       | true                | "consults" or "diagnostics" .
-|  `paystackKey `             | `String`       | false                | Your paystack Public Key .
-|  `markup `             | `String`       | false                | Your percentage profit .
+|  `service `             | `String`       | false                | "consults" or "diagnostics".
+|  `paystackKey `             | `String`       | true (for diagnostics) | Your paystack Public Key.
+|  `markup `             | `String`       | false                | Your percentage profit for diagnostics.
+|  `businessName `             | `String`       | true (for diagnostics) | Your business name.

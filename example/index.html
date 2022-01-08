@@ -3,34 +3,38 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>PneumaHealth Widget</title>
+ <title>PneumaCare Widgets</title>
  <style>
+   body {
+     height: 50000px;
+   }
    button {
      height: 40px;
    }
  </style>
 </head>
 <body style="background: teal">
-    <h2>Hello there</h2>
-    <button onclick="openPneumaCareWidgets()">All PneumaCare Widgets</button>
-    <button onclick="openPneumaCareConsultsWidget()">Talk to a Doctor</button>
-    <button onclick="openPneumaCareDiagnosticsWidget()">
-      Connect with a Lab
-    </button>
-  <script src="./../dist/bundle.js"></script>
+  <h2>Hello there</h2>
+
+  <div id="PneumaHealthJS"></div>
+  
+  <button onclick="openPneumaCareWidgets()">All PneumaCare Widgets</button>
+  <button onclick="openPneumaCareConsultsWidget()">Talk to a Doctor</button>
+  <button onclick="openPneumaCareDiagnosticsWidget()">Connect with a Lab</button>
+  <script src="http://localhost:8080/PneumaHealthJS.js"></script>
   <script>
     const config = {
-      publicAPIKey: "j72nw6niu527coanz7b8",
-      userId: "s64h80wbp2pdjsi"
+      userId: 's64h80wbp2pdjsi', // 37q7k7jnwqd2mes
+      businessName: "Dele Ali Health"
     };
     function openPneumaCareWidgets() {
-      PneumaHealthJS.init({ ...config });
+      PneumaHealthJS.init({...config, paystackKey: "pk_test_62b567cc49e32e7392a8bb33697587e41e12c65e", markup: 20});
     }
     function openPneumaCareConsultsWidget() {
-      PneumaHealthJS.init({ ...config, service: "consults" });
+      PneumaHealthJS.init({...config, service: 'consults'});
     }
     function openPneumaCareDiagnosticsWidget() {
-      PneumaHealthJS.init({...config, service: 'diagnostics', paystackKey: "pk_test_****", markup: 20 });
+      PneumaHealthJS.init({...config, service: 'diagnostics', paystackKey: "pk_test_62b567cc49e32e7392a8bb33697587e41e12c65e", markup: 20 });
     }
   </script>
   
