@@ -14,7 +14,7 @@ Using CDN:
 
 For JS frameworks import it and use
 ```js
-import PneumaHealthJS from 'pneumahealth-js'
+import PneumaHealthJS from '@pneumahealth/pneumahealth-js'
 ```
 
 ### Usage
