@@ -9,12 +9,12 @@ Checkout the [React JS Demo](https://codesandbox.io/s/pneumahealth-js-demo-yo832
 
 Using CDN:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/PneumaCareHQ/pneumahealth-consults-js@1.0.4/dist/bundle.js"/>
+<script src="https://cdn.jsdelivr.net/gh/PneumaCareHQ/pneumahealth-consults-js@1.0.6/dist/bundle.js"/>
 ```
 
 For JS frameworks import it and use
 ```js
-import PneumaHealthJS from '@pneumahealth/pneumahealth-js'
+import PneumaHealthJS from 'pneumahealth-js'
 ```
 
 ### Usage
@@ -23,7 +23,11 @@ import PneumaHealthJS from '@pneumahealth/pneumahealth-js'
 PneumaHealthJS.init({
     userId: 'xxxxxxxxxxxxxxx',
     service: "consults", // or "diagnostics",
-    businessName: "Test Medical Clinic"
+    businessName: "Test Medical Clinic",
+    firebaseConfig: {
+        ... //firebase config object goes here
+    },
+    firebaseUsersCollectionName: "users",
 });
 ```
 
@@ -32,8 +36,12 @@ PneumaHealthJS.init({
 General
 |Name                   | Type           | Required            | Description         |
 |-----------------------|----------------|---------------------|---------------------|
-|  `userId `             | `String`       | true                | Your patient's ID.
+|  `userId `             | `String`       | false                | Your patient's ID.
 |  `service `             | `String`       | false                | "consults" or "diagnostics".
+|  `firebaseConfig `             | `Object`       | true                | Config object from your firebase app's console
+|  `firebaseUsersCollectionName `             | `string`       | true                | Name of your firebase store
+|  `brandLogo `             | `string`       | false                | Brand logo of your business
+
 
 For "CONSULTS" service
 |Name                   | Type           | Required            | Description         |
@@ -47,3 +55,18 @@ For "DIAGNOSTICS" service
 |  `paystackKey `             | `String`       | true | Your paystack Public Key.
 |  `markup `             | `String`       | false                | Your percentage profit for diagnostics.
 |  `businessName `             | `String`       | true | Your business name.
+
+For "SERVICE" service
+|Name                   | Type           | Required            | Description         |
+|-----------------------|----------------|---------------------|---------------------|
+|  `paystackKey `             | `String`       | true | Your paystack Public Key.
+|  `providerId `             | `String`       | true | Your paystack Public Key.
+|  `markup `             | `String`       | false                | Your percentage profit for diagnostics.
+
+### Adding Firebase
+Firebase allows you to implement authentication and also for chat file uploads
+
+##### Step 1: Create a Firebase App
+##### Step 2: Copy the Firebase App Config
+##### Step 3: Enable Firestore 
+##### Step 4: Enable Storage 
