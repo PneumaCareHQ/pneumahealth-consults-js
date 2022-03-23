@@ -24,6 +24,7 @@ PneumaHealthJS.init({
     userId: 'xxxxxxxxxxxxxxx',
     service: "consults", // or "diagnostics",
     businessName: "Test Medical Clinic",
+    developerAPIKey: "xxxxxxxxxxxxxxx",
     firebaseConfig: {
         ... //firebase config object goes here
     },
@@ -37,6 +38,7 @@ General
 |Name                   | Type           | Required            | Description         |
 |-----------------------|----------------|---------------------|---------------------|
 |  `userId `             | `String`       | false                | Your patient's ID.
+|  `developerAPIKey `             | `String`       | true                | Your developer API key.
 |  `service `             | `String`       | false                | "consults" or "diagnostics".
 |  `firebaseConfig `             | `Object`       | true                | Config object from your firebase app's console
 |  `firebaseUsersCollectionName `             | `string`       | true                | Name of your firebase store
