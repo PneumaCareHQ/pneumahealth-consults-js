@@ -1,6 +1,6 @@
 {
   "name": "@pneumahealth/pneumahealth-js",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A JS library for implementing the PneumaHealth widget - pneumahealth-js is a safe and secure web drop-in module and this library provides a front-end web",
   "main": "index.js",
   "directories": {
