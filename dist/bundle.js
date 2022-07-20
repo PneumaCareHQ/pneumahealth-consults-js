@@ -1,4 +1,3 @@
-/*! For license information please see PneumaHealthJS.js.LICENSE.txt */
 !(function (e, m) {
   "object" == typeof exports && "object" == typeof module
     ? (module.exports = m())
@@ -61,14 +60,13 @@
         return Object.prototype.hasOwnProperty.call(e, m);
       }),
       (n.p = ""),
-      n((n.s = 535))
+      n((n.s = 592))
     );
   })({
-    535: function (e, m, n) {
-      e.exports = n(536);
+    592: function (e, m, n) {
+      e.exports = n(593);
     },
-    536: function (e, m, n) {
-      "use strict";
+    593: function (e, m, n) {
       function t(e, m) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -197,11 +195,12 @@
               switch (m.action) {
                 case "init":
                   this.iframe &&
-                    (console.log("IFRAME... ", this.config),
                     this.iframe.contentWindow.postMessage(
-                      JSON.stringify(this.config),
+                      JSON.stringify(
+                        (null == m ? void 0 : m.config) || this.config
+                      ),
                       "*"
-                    ));
+                    );
                   break;
                 case "close":
                   this.iframe && this.iframe.remove();
