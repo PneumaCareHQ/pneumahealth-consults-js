@@ -67,7 +67,6 @@
       e.exports = n(593);
     },
     593: function (e, m, n) {
-      "use strict";
       function t(e, m) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
