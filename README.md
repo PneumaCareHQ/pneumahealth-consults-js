@@ -1,6 +1,6 @@
 # PneumaHealth Widget JavaScript SDK
 
-A JS library for implementing the PneumaHealth widget - PneumaHealthJS is a safe and secure web drop-in module and this library provides a front-end web for tele-medicine and medical consultations
+A JS library for implementing the PneumaHealth widget - PneumaHealthJS is a safe and secure web drop-in module and this library provides a front-end web for tele-medicine and medical consultations.
 
 ## Try the demo
 
