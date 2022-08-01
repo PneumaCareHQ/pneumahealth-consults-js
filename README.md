@@ -1,10 +1,10 @@
 # PneumaHealth Widget JavaScript SDK
 
-A JS library for implementing the PneumaHealth widget - PneumaHealthJS is a safe and secure web drop-in module and this library provides a front-end web
+A JS library for implementing the PneumaHealth widget - PneumaHealthJS is a safe and secure web drop-in module and this library provides a front-end web for tele-medicine and medical consultations
 
-### Try the demo
+## Try the demo
 
-Checkout the [React JS Demo](https://codesandbox.io/s/pneumahealth-js-demo-yo832) or [Static HTML Demo](https://codesandbox.io/s/pneumahealth-js-html-demo-ihd3i) to view how the PneumaHealth Consults Widget works. _Click "Talk to a Doctor" or "Connect with a Lab"_
+Checkout the [React JS Demo](https://replit.com/@PneumaCare/PneumaHealthJS-ReactJS-Demo) or [Static HTML Demo](https://replit.com/@PneumaCare/PneumaHealthJS-HTML-Demo) to view how the PneumaHealth Consults Widget works. _Click "Talk to a Doctor"_ button.
 
 ### Installing
 
@@ -14,7 +14,7 @@ Using CDN:
 <script src="https://cdn.jsdelivr.net/npm/@pneumahealth/pneumahealth-js@1.1.7/dist/bundle.js"></script>
 ```
 
-For JS frameworks import it and use
+For JS frameworks import it and use:
 
 ```js
 import PneumaHealthJS from "@pneumahealth/pneumahealth-js";
@@ -47,34 +47,26 @@ General
 | `firebaseUsersCollectionName` | `string` | true | Name of your firebase store
 | `brandLogo` | `string` | false | Brand logo of your business
 
+> **Note:** By providing the `userId` key, you skip the entire auth flow, similarly, not providing the `userId` key means patients would be required to register / login before access to the widget.
+
 For "CONSULTS" service
 |Name | Type | Required | Description |
 |-----------------------|----------------|---------------------|---------------------|
 | `paystackKey` | `String` | false | Your paystack Public Key.
 | `consultationFee` | `String` | false | Amount for Consultation in NGN
 
-For "DIAGNOSTICS" service
-|Name | Type | Required | Description |
-|-----------------------|----------------|---------------------|---------------------|
-| `paystackKey` | `String` | true | Your paystack Public Key.
-| `markup` | `String` | false | Your percentage profit for diagnostics.
-| `businessName` | `String` | true | Your business name.
-
-For "SERVICE" service
-|Name | Type | Required | Description |
-|-----------------------|----------------|---------------------|---------------------|
-| `paystackKey` | `String` | true | Your paystack Public Key.
-| `providerId` | `String` | true | Your paystack Public Key.
-| `markup` | `String` | false | Your percentage profit for diagnostics.
+> **Note:** Not providing the `paystackKey` means the service would be free. You should add your paystack key to enable payments.
 
 ### Adding Firebase
 
-Firebase allows you to implement authentication and also for chat file uploads
+Firebase allows you to implement authentication and file uploads
 
-##### Step 1: Create a Firebase App
+1: Create a Firebase App. _([Relevant docs](https://cloud.google.com/firestore/docs/create-database-web-mobile-client-library))_
 
-##### Step 2: Copy the Firebase App Config
+2: Enable Authentication with `email/password` Sign-in method. _([Relevant docs](https://cloud.google.com/appengine/docs/legacy/standard/python/authenticating-users-firebase-appengine))_
 
-##### Step 3: Enable Firestore
+2: Enable Firestore. _([Relevant docs](https://cloud.google.com/firestore/docs/create-database-web-mobile-client-library))_
 
-##### Step 4: Enable Storage
+3: Enable Storage. _([Relevant docs](https://firebase.google.com/docs/storage))_
+
+4: Copy the Firebase App Config
