@@ -11,7 +11,7 @@ Checkout the [React JS Demo](https://replit.com/@PneumaCare/PneumaHealthJS-React
 Using CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@pneumahealth/pneumahealth-js@1.1.15/dist/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@pneumahealth/pneumahealth-js@1.2.0/dist/bundle.js"></script>
 ```
 
 For JS frameworks import it and use:
