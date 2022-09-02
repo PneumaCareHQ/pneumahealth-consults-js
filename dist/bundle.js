@@ -67,6 +67,7 @@
       e.exports = n(557);
     },
     557: function (e, m, n) {
+      "use strict";
       function t(e, m) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
@@ -152,12 +153,10 @@
                 "id",
                 "pneumacare-widget-loading"
               ),
-              (this.loadingComponent.innerHTML = "\n        "
-                .concat(
-                  s,
-                  " \n        <div>\n          <div class='loader'></div>\n          <div>Loading PneumaHealth "
-                )
-                .concat(m || "", " widget...</div>\n        </div>\n      ")),
+              (this.loadingComponent.innerHTML = "\n        ".concat(
+                s,
+                " \n        <div>\n          <div class='loader'></div>\n          <div>Loading...</div>\n        </div>\n      "
+              )),
               this.loadingComponent.setAttribute("style", e),
               document.body.appendChild(this.loadingComponent));
           },
