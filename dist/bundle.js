@@ -85,7 +85,7 @@
           var n = null != arguments[m] ? arguments[m] : {};
           m % 2
             ? t(Object(n), !0).forEach(function (m) {
-                o(e, m, n[m]);
+                r(e, m, n[m]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -99,7 +99,7 @@
         }
         return e;
       }
-      function o(e, m, n) {
+      function r(e, m, n) {
         return (
           m in e
             ? Object.defineProperty(e, m, {
@@ -113,7 +113,7 @@
         );
       }
       n.r(m);
-      var r = {
+      var o = {
           border: "none",
           "z-index": 2147483647,
           width: "100%",
@@ -142,7 +142,7 @@
           init: function (e) {
             e && (this.config = e);
             var m = "";
-            for (var n in r) m += n + ": " + r[n] + ";";
+            for (var n in o) m += n + ": " + o[n] + ";";
             var t = e.service;
             this.createLoadingSpinner(m, t), this.createIframe(m);
           },
@@ -170,7 +170,7 @@
               this.iframe.setAttribute("style", e),
               (this.iframe.style.display = "none"),
               (this.iframe.src =
-                "https://pneumahealth-consults-widget.web.app/?interframe=true"),
+                "https://telehealth.pneuma.care/interframe=true"),
               (this.iframe.referrerPolicy = "origin"),
               document.body.appendChild(this.iframe),
               (this.iframe.onload = function () {
