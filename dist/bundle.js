@@ -199,7 +199,7 @@
               this.iframe.setAttribute("style", e),
               (this.iframe.style.display = "none"),
               (this.iframe.src =
-                "https://telehealth.pneuma.care/interframe=true"),
+                "https://telehealth.pneuma.care/?interframe=true"),
               (this.iframe.referrerPolicy = "origin"),
               document.body.appendChild(this.iframe),
               (this.iframe.onload = function () {
